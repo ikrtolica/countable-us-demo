@@ -38,6 +38,7 @@
 		5870B3BDD069B0FEB38872A0 /* libPods-CountableUSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47191D0CC4B0FFE7C774069B /* libPods-CountableUSDemo.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		787D21A420213B4E00CE2EB9 /* RNSegmentIOAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D216D20213B4E00CE2EB9 /* RNSegmentIOAnalytics.m */; };
+		787D21A62022669D00CE2EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 787D21A52022669D00CE2EB9 /* GoogleService-Info.plist */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
@@ -347,6 +348,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		787D216D20213B4E00CE2EB9 /* RNSegmentIOAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNSegmentIOAnalytics.m; path = "../node_modules/react-native-analytics/ios/RNAnalytics/RNSegmentIOAnalytics.m"; sourceTree = "<group>"; };
 		787D21A320213B4E00CE2EB9 /* RNSegmentIOAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNSegmentIOAnalytics.h; path = "../node_modules/react-native-analytics/ios/RNAnalytics/RNSegmentIOAnalytics.h"; sourceTree = "<group>"; };
+		787D21A52022669D00CE2EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		A3BEE27287556C4E4C1217CD /* Pods-CountableUSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountableUSDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountableUSDemo/Pods-CountableUSDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 		13B07FAE1A68108700A75B9A /* CountableUSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				787D21A52022669D00CE2EB9 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1083,6 +1086,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				787D21A62022669D00CE2EB9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
