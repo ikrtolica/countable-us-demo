@@ -11,6 +11,8 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <Analytics/SEGAnalytics.h>
+#import <Segment-Firebase/SEGFirebaseIntegrationFactory.h>
 
 @implementation AppDelegate
 
@@ -20,6 +22,13 @@
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
+  SEGAnalyticsConfiguration *configuration = [SEGAnalyticsConfiguration configurationWithWriteKey:@"oq4j3GXrdG3AA8mJceWaDJzBe69nuOxA"];
+  configuration.trackApplicationLifecycleEvents = YES; // Enable this to record certain application events automatically!
+  configuration.recordScreenViews = NO; // Enable this to record screen views automatically!
+  [configuration use:[SEGFirebaseIntegrationFactory instance]];
+  [SEGAnalytics debug:YES];
+  [SEGAnalytics setupWithConfiguration:configuration];
+  
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"CountableUSDemo"
                                                initialProperties:nil

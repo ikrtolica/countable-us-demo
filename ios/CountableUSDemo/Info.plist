@@ -52,5 +52,18 @@
 			</dict>
 		</dict>
 	</dict>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb1186336018136457</string>
+      </array>
+    </dict>
+  </array>
+  <key>FacebookAppID</key>
+  <string>1186336018136457</string>
+  <key>FacebookDisplayName</key>
+  <string>Segment-Demo-Countable</string>
 </dict>
 </plist>

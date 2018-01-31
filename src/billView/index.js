@@ -5,15 +5,20 @@ import {
   View,
   Button
 } from 'react-native';
+import Analytics from 'react-native-analytics';
 
 export default class BillView extends PureComponent {
   constructor(props) {
     super(props);
   }
 
-  onYea = () => {}
+  onYea = () => {
+    Analytics.track("bill_vote", { "vote_type": "yea", "bill_id": `${this.props.id}}` });
+  }
 
-  onNay = () => {}
+  onNay = () => {
+    Analytics.track("bill_vote", { "vote_type": "nay", "bill_id": `${this.props.id}}` });
+  }
 
   render() {
     return (
@@ -29,6 +34,7 @@ export default class BillView extends PureComponent {
         </Text>
         <View style={styles.billButtonBar}>
           <Button
+            style={{width: '50%'}}
             color={colors.green}
             onPress={this.onYea}
             title="YEA"
@@ -36,6 +42,7 @@ export default class BillView extends PureComponent {
             YEA
           </Button>
           <Button
+            style={{width: '50%'}}
             color={colors.red}
             onPress={this.onNay}
             title="NAY"
@@ -63,7 +70,7 @@ const styles = StyleSheet.create({
   billButtonBar: {
     flex: 1,
     flexDirection: 'row',
-    height: 100,
+    height: 60,
   },
   billDetailContainer: {
     flexDirection: 'column',
