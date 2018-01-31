@@ -10,8 +10,11 @@ import {
   StyleSheet,
   Text,
   FlatList,
-  View
+  View,
+  TextInput,
+  Button
 } from 'react-native';
+import Analytics from 'react-native-analytics';
 import billsList from './bills.json';
 import BillView from './src/billView';
 
@@ -19,7 +22,7 @@ export default class App extends Component<{}> {
 
   constructor(props) {
       super(props);
-      this.state = { bills: [] };
+      this.state = { email: '', bills: [] };
   }
 
   componentDidMount() {
@@ -40,9 +43,29 @@ export default class App extends Component<{}> {
     );
   }
 
+  onEmailSubmit = () => {
+    Analytics.identify("id_submit", {"email": `${this.state.email}`});
+  }
+
   render() {
+    Analytics.screen("screen_view", {"screenType":"bill_list_view"});
     return (
       <View style={styles.billsListContainer} >
+        <View style={styles.emailInput}>
+          <TextInput
+            style={{height: 40, width: '80%', borderColor: 'gray', borderWidth: 1}}
+            onChangeText={(text) => this.setState({email: text})}
+            value={this.state.email}
+          />
+          <Button
+            style={{width: '20%'}}
+            color='#000000'
+            onPress={this.onEmailSubmit}
+            title='Add'
+          >
+            Add
+          </Button>
+        </View>
         <FlatList
           data={this.state.bills}
           initialNumToRender={3}
@@ -79,5 +102,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     width: '100%',
-  }
+  },
+  emailInput: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    width: '100%',
+  },
 });
