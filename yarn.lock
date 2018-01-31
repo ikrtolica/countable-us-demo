@@ -2634,7 +2634,7 @@ json-schema-traverse@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-0.3.1.tgz#349a6d44c53a51de89b40805c5d5e59b417d3340"
 
-json-schema@0.2.3:
+json-schema@0.2.3, json-schema@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/json-schema/-/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
 
@@ -3096,6 +3096,10 @@ multipipe@^0.1.2:
   dependencies:
     duplexer2 "0.0.2"
 
+murmurhash@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/murmurhash/-/murmurhash-0.0.2.tgz#6f07bd8a1105e709c26fc89420cb5930c24585fe"
+
 mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
@@ -3269,6 +3273,23 @@ optimist@^0.6.1:
   dependencies:
     minimist "~0.0.1"
     wordwrap "~0.0.2"
+
+optimizely-client-sdk@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/optimizely-client-sdk/-/optimizely-client-sdk-1.6.0.tgz#f890c2112aa1a281f6155355fa0148a1a6b6baa6"
+  dependencies:
+    optimizely-server-sdk "~1.5.0"
+
+optimizely-server-sdk@~1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/optimizely-server-sdk/-/optimizely-server-sdk-1.5.0.tgz#3faaf99178cd8daa4363a5f2bfed539155165bf3"
+  dependencies:
+    json-schema "^0.2.3"
+    lodash "^4.13.1"
+    murmurhash "0.0.2"
+    request "~2.81.0"
+    sprintf "^0.1.5"
+    uuid "~3.0.1"
 
 optionator@^0.8.1:
   version "0.8.2"
@@ -3798,7 +3819,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@2.81.0:
+request@2.81.0, request@~2.81.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -4118,6 +4139,10 @@ spdx-license-ids@^1.0.2:
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
+
+sprintf@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/sprintf/-/sprintf-0.1.5.tgz#8f83e39a9317c1a502cb7db8050e51c679f6edcf"
 
 sshpk@^1.7.0:
   version "1.13.1"
@@ -4442,7 +4467,7 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
-uuid@3.0.1:
+uuid@3.0.1, uuid@~3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
